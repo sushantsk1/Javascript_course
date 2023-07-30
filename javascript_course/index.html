@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript course</title>
+    <style>
+      #header {
+        color: greenyellow;
+        background-color: cyan;
+      }
+      .but {
+        border: 2px solid yellow;
+        align-items: center;
+        align-content: center;
+      }
+    </style>
+  </head>
+
+  <div id="header">
+    <h1>Click Below</h1>
+  </div>
+
+  <div class="but">
+    <button onclick="clicked()">Click</button>
+    ll
+  </div>
+  <body></body>
+
+  <script type="text/Javascript">
+
+                // data types
+                var str="sushant kulkarni";
+                var roll=40;
+
+                //objects
+                var marks={
+                  ravi:49,
+                  shubham:99,
+                }
+                console.log(str);
+              console.log("roll number is "+roll);
+
+                //boolean data tyep
+                var a =true;
+                var a =false;
+                console.log(a);
+                console.log(undefined);
+
+                //array
+                var arr=[1,2,3,4,"striung",6,7,8,9,0]
+                console.log(arr);
+
+                //functions
+                function avg(age) {
+                  if (age>18) {
+                    console.log("can drive");
+                  }else
+                  console.log("not drivable");
+                }
+                c1=avg(12);
+                console.log(c1);
+
+                // loops
+                var arr1=[12,3,4,5,6,7,3];
+                console.log(arr1);
+                for(var i=0;i<=arr1.length;i++) {
+                console.log(arr1[i]);
+                }
+
+                arr1.forEach(element => {
+                  console.log(element);      //another method to iterate for loop element
+                });
+
+
+                //let const var and continue
+              let k=45;
+
+              for(let i=0;i<45;i++){
+                if (i%2==0) {
+                  continue;
+                }
+                else
+                console.log(i);
+              }
+            //array methods
+            console.log(arr.length);
+            console.log(arr.pop())
+
+
+            //string methods
+            let str1="sushant is my name";
+            console.log(str1.length);
+            console.log(str1.indexOf("is"));
+            console.log(str1.slice(3,8))
+            console.log(str1.replace("sushant","harry"))
+
+            //dates in js
+            let mydate=new Date();
+            console.log(mydate.getTime());
+            console.log(mydate.getYear());
+            console.log(mydate.getDay());
+            console.log(mydate.getMinutes());
+
+
+            //dom manipulation
+            let item=document.getElementById("header");
+            console.log(item);
+
+            let itemclass=document.getElementsByClassName("but");
+            console.log(itemclass);
+            itemclass[0].style.background="yellow"; //to change the style from js
+            console.log(item.innerHTML);  //to print html text of class
+            console.log(item.innerText);  //to print text of class
+
+    //use of get element by tag name
+    tn=document.getElementsByTagName('div');
+    console.log(tn)
+
+
+    //events in javascript
+    function clicked() {
+     console.log("clicked");
+    }
+
+    window.onload=function(){
+      console.log("the doc was clicked");   //will be display whenever the page is refresh
+    }
+
+    header.addEventListener('click', function(){
+      console.log("click hogya");      // will display click hogya when clcik on header container
+    });
+
+    header.addEventListener('mouseover',function(){
+      console.log("mouse on container");   //will display ---- whene hover over container
+    });
+    header.addEventListener('mouseout',function(){
+      console.log("mouse on container");    //will display ---- whene out of container
+    });
+
+
+    //setTimeout and setInterval
+//below is the traidiotanl way where first defined function then settimeout
+//logkaro=()=>{
+ // console.log("agye aplog!")
+//}
+  //setTimeout(logkaro,2000);
+
+
+  //below is the shortcut for settimeout/setinterval
+  //setInterval(logkaro=() => {
+   // console.log("agye aplog")
+  //}, 3000);
+
+  
+  </script>
+</html>
